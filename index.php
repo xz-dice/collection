@@ -1,7 +1,10 @@
 <?php
 require 'dbconn.php';
 
-$result = $query->fetchall()
+
+$query->setFetchMode(PDO::FETCH_ASSOC);
+$result = $query->fetch();
 
 var_dump($result);
 echo '</pre>';
+
