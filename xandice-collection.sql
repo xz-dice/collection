@@ -7,7 +7,7 @@
 #
 # Host: 127.0.0.1 (MySQL 5.7.33)
 # Database: xandice-collection
-# Generation Time: 2021-03-29 10:40:10 +0000
+# Generation Time: 2021-03-29 10:56:53 +0000
 # ************************************************************
 
 
@@ -439,7 +439,9 @@ VALUES
 	(396,'Number One - Instrumental Version','Patrice Rushen','Straight From The Heart','https://i.scdn.co/image/ab67616d0000b27349c75fa3e440ca4aa5a53440','https://p.scdn.co/mp3-preview/8379c3c5f349a956ca86695eee862704c85e8762?cid=9950ac751e34487dbbe027c4fd7f8e99'),
 	(397,'You Belong','Hercules & Love Affair','Hercules & Love Affair','https://i.scdn.co/image/ab67616d0000b273b722a3d355e6bbf55b8a1dc5','https://p.scdn.co/mp3-preview/e7a3af9ae55d1ff3cba95723eee9035853ddbdc6?cid=9950ac751e34487dbbe027c4fd7f8e99'),
 	(398,'Running (feat. Sísý Ey)','Hercules & Love Affair, Sísý Ey','Omnion','https://i.scdn.co/image/ab67616d0000b2738ee8ae54d7a08cd90701d231','https://p.scdn.co/mp3-preview/aa0696f1652c149e309b9c80a04b70f196da5e44?cid=9950ac751e34487dbbe027c4fd7f8e99'),
-	(399,'Simple And Clean - PLANITb Remix','Hikaru Utada, ??????????','COLORS','https://i.scdn.co/image/ab67616d0000b273d6df3e322722119345ef3682','https://p.scdn.co/mp3-preview/9bc7c0d0cc307eb81dd12c9a2c61997a34a86346?cid=9950ac751e34487dbbe027c4fd7f8e99');
+	(399,'Simple And Clean - PLANITb Remix','Hikaru Utada, ??????????','COLORS','https://i.scdn.co/image/ab67616d0000b273d6df3e322722119345ef3682','https://p.scdn.co/mp3-preview/9bc7c0d0cc307eb81dd12c9a2c61997a34a86346?cid=9950ac751e34487dbbe027c4fd7f8e99'),
+	(400,'Baby','St. Pepsi','Gin City','https://f4.bcbits.com/img/a4051472426_16.jpg','https://saintpepsi.bandcamp.com/track/baby'),
+	(401,'Love Is Going To Destroy Me','Mansions on the Moon','N/A','https://i.discogs.com/R-13832192-1562118604-4629.jpeg?bucket=discogs-images&fit=contain&format=auto&height=500&quality=90&width=500&signature=HRnP3L2qFuxL%2B8zrScTzRICsMYR4wekKKitvBU3qhYA%3D','https://www.youtube.com/watch?v=jH60HX83KE4');
 
 /*!40000 ALTER TABLE `songs` ENABLE KEYS */;
 UNLOCK TABLES;
