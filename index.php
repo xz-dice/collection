@@ -1,7 +1,8 @@
 <?php
-require 'dbconn.php';
+require_once 'dbconn.php';
+require_once 'functions.php';
 
-$result = $query->fetchall()
-
-var_dump($result);
+echo '<pre>';
+var_dump(getSongs($db));
 echo '</pre>';
+
