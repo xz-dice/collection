@@ -1,10 +1,8 @@
 <?php
-require 'dbconn.php';
+require_once 'dbconn.php';
+require_once 'functions.php';
 
-
-$query->setFetchMode(PDO::FETCH_ASSOC);
-$result = $query->fetch();
-
-var_dump($result);
+echo '<pre>';
+var_dump(getSongs($db));
 echo '</pre>';
 
