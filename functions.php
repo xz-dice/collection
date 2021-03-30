@@ -15,3 +15,7 @@ function getSongs($db)
 
     return $query->fetchall();
 }
+
+echo '<pre>';
+var_dump(getSongs($db));
+echo '</pre>';
