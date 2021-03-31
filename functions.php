@@ -6,7 +6,7 @@
  * @param $db
  * @return array of songs with information about the songs
  */
-function getSongs($db) : array
+function getSongs(PDO $db) : array
 {
     $query = $db->prepare("SELECT `title`, `artist`, `album_name`, `artwork`, `track_preview`, `track_link` FROM `songs`;");
 
