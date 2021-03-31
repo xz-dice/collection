@@ -1,39 +1,37 @@
 <?php
+require '../functions.php';
+use PHPUnit\Framework\TestCase;
+class Functions extends TestCase{
 
-/**
- * Selects fields from the database and returns an associative array
- *
- * @param $db
- * @return array of songs with information about the songs
- */
-function getSongs($db) : array
-{
-    $query = $db->prepare("SELECT `title`, `artist`, `album_name`, `artwork`, `track_preview`, `track_link` FROM `songs`;");
+    public function testSuccessDisplaySongs()
+    {
+        //expected result of the test
+        $expected = "<tr>";
+        $expected .= '<td><a href="http://open.spotify.com/track/track_link test' target='_blank'/>title test</td>';
+        $expected .= '<td>artist test</td>';
+        $expected .= '<td>album name test</td>';
+        $expected .='<td>' . "<a href='track preview test' target='_blank'>" . "<img src='artwork test' width=175 alt='album art'/>" . '</a></td>';
+        $expected .= "</tr>";
+        //inputs to get expected result
+        $input = [[
+            "title"=>"title test",
+            "artist"=>"artist test",
+            "album_name"=>"album name test",
+            "track_preview"=>"track preview test",
+            "track_link"=>"track link test",
+            "artwork"=>"artwork test",
+        ]];
+        //run the real function and pass in the inputs
+        $case = displaySongs($songs);
+        //compare the expected result to the actual result
+        $this->assertEquals($expected, $case);
+    }
 
-    $query->execute();
-
-    return $query->fetchall();
-
+    public function testMalformedCodeDisplaySongs(){
+        //inputs to get expected result
+        $input = 1;
+        //compare the expected result to the actual result
+        $this->expectException(TypeError::class);
+        displaySongs($input);
+    }
 }
-
-/**
- * Iterates through an array and posts data to an HTML table, wrapping song titles in a link that goes to Spotify, and wrapping the album artwork in a link that goes to a preview of the track
- *
- * @param $songs
- * @return string that can be echoed out to produce an HTML populated with data from the database
- */
-function displaySongs($songs) : string
-{
-    $result = "";
-
-    foreach ($songs as $song) {
-        $result .= "<tr>";
-        $result .= '<td>' . "<a class='song' href='http://open.spotify.com/track/" . $song["track_link"] . "'/>" . $song["title"] . '</td>';
-        $result .= '<td>' . $song["artist"] . '</td>';
-        $result .= '<td>' . $song["album_name"] . '</td>';
-        $result .='<td>' . "<a href='" . $song["track_preview"] ."'target='_blank'>" . "<img src='" . $song["artwork"] . "' width=175 alt='album art'/>" . '</a></td>';
-        $result .= "</tr>";
-        }
-return $result;
-}
-

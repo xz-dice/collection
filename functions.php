@@ -22,7 +22,7 @@ function getSongs($db) : array
  * @param $songs
  * @return string that can be echoed out to produce an HTML populated with data from the database
  */
-function displaySongs($songs) : string
+function displaySongs(array $songs) : string
 {
     $result = "";
 
