@@ -7,10 +7,10 @@ class Functions extends TestCase{
     {
         //expected result of the test
         $expected = "<tr>";
-        $expected .= '<td><a href="http://open.spotify.com/track/track_link test' target='_blank'/>title test</td>';
-        $expected .= '<td>artist test</td>';
-        $expected .= '<td>album name test</td>';
-        $expected .='<td>' . "<a href='track preview test' target='_blank'>" . "<img src='artwork test' width=175 alt='album art'/>" . '</a></td>';
+        $expected .= "<td><a class='song' href='http://open.spotify.com/track/track link test' target='_blank'/>title test</td>";
+        $expected .= "<td>artist test</td>";
+        $expected .= "<td>album name test</td>";
+        $expected .="<td>" . "<a href='track preview test' target='_blank'><img src='artwork test' width=175 alt='album art'/>" . "</a></td>";
         $expected .= "</tr>";
         //inputs to get expected result
         $input = [[
@@ -22,7 +22,7 @@ class Functions extends TestCase{
             "artwork"=>"artwork test",
         ]];
         //run the real function and pass in the inputs
-        $case = displaySongs($songs);
+        $case = displaySongs($input);
         //compare the expected result to the actual result
         $this->assertEquals($expected, $case);
     }
