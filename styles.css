@@ -1,0 +1,112 @@
+* {
+   box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    padding: 0;
+    overflow-x: hidden;
+	font-family: 'Fredoka One', cursive;
+	background-color: #fffded;
+}
+
+/*---------------TITLE----------------*/
+h1 {
+	font-size: 40px;
+	font-weight: 900;
+	background-color: #161032;
+	padding:20px;
+}
+
+nav {
+	display: flex;
+	background-color: #4d5be0;
+	justify-content: space-around;
+	padding:65px;
+	height: 75px;
+	color: #fffded;
+	text-transform: uppercase;
+	align-items: center;
+}
+
+/*---------------MAIN----------------*/
+
+td a.song {
+	text-decoration: none;
+	color: #161032;
+}
+
+td a.song:hover {
+	padding: 5px;
+	cursor: pointer;
+	transition: color 0.5s, font-size 0.5s;
+	background-color: #363166;
+	color: #fffded;
+	font-size: 15px;
+}
+
+header {
+	display: flex;
+	justify-content: space-around;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: lighter;
+}
+
+img:hover{
+	filter: opacity(90%);
+}
+
+section {
+	display: flex;
+	justify-content: center;
+}
+
+table {
+	padding:10px;
+	font-family: 'Work Sans', sans-serif;
+	width: 1200px;
+}
+
+td {
+	text-align: center;
+	border-bottom: 1px;
+	font-size: 90%;
+	font-weight: 500;
+	letter-spacing: .5px;
+}
+
+thead{
+	background-color: #161032;
+	height: 50px;
+}
+table th{
+	position: sticky;
+	background-color: #161032;
+	padding: 20px;
+	font-size: 110%;
+	color: #fffded;
+	top: 0;
+	z-index: 1;
+	letter-spacing: 2px;
+	font-weight: 400;
+
+}
+
+/*---------------RESPONSIVE----------------*/
+@media screen and (max-width: 1000px) {
+		section {
+			width: 100%;
+		}
+	table {
+		width: 550px;
+	}
+	img {
+		width: 100px;
+	}
+	thead {
+		height: 30px;
+	}
+	table th{
+		font-size: 90%;
+	}
+}
