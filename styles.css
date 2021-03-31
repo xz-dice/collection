@@ -63,12 +63,11 @@ section {
 }
 
 table {
-	/*margin: 20px;*/
 	padding:10px;
-	/*font-family: 'Roboto', cursive;*/
 	font-family: 'Work Sans', sans-serif;
 	width: 1200px;
 }
+
 td {
 	text-align: center;
 	border-bottom: 1px;
@@ -95,21 +94,14 @@ table th{
 }
 
 /*---------------RESPONSIVE----------------*/
-
 @media screen and (max-width: 1000px) {
-	section {
-		width: 50%;
-	}
-
-
-	h1 a {
-		font-size: 30px;
-	}
-
-
-	@media screen and (max-width: 800px) {
 		section {
 			width: 100%;
 		}
+	table {
+		width: 550px;
+	}
+	img {
+		width: 100px;
 	}
 }

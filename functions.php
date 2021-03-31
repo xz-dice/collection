@@ -28,10 +28,10 @@ function displaySongs($songs) : string
 
     foreach ($songs as $song) {
         $result .= "<tr>";
-        $result .= '<td>' . "<a class='song' href='http://open.spotify.com/track/" . $song["track_link"] . "'/>" . $song["title"] . '</td>';
+        $result .= '<td>' . "<a class='song' href='http://open.spotify.com/track/" . $song["track_link"] . "' target='_blank'/>" . $song["title"] . '</td>';
         $result .= '<td>' . $song["artist"] . '</td>';
         $result .= '<td>' . $song["album_name"] . '</td>';
-        $result .='<td>' . "<a href='" . $song["track_preview"] ."'target='_blank'>" . "<img src='" . $song["artwork"] . "' width=175 alt='album art'/>" . '</a></td>';
+        $result .='<td>' . "<a href='" . $song["track_preview"] ."' target='_blank'>" . "<img src='" . $song["artwork"] . "' width=175 alt='album art'/>" . '</a></td>';
         $result .= "</tr>";
         }
 return $result;
